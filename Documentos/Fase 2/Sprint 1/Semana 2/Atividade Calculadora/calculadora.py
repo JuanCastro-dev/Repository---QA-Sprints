@@ -23,11 +23,13 @@ class Calculadora:
                                     ", portanto não há resto")
         return n1%n2
 
-    def potencia(self,n1,n2):
+    def pot(self,n1,n2):
         return n1**n2
 
     def raiz(self,n1,n2):
         if n2 == 0:
             raise ValueError("Não é possível tirar a raiz zero de um número")
+        if n1 < 0:
+            raise ValueError("Não é possível tirar uma raiz negativa")
         return n1**(1/n2)
 

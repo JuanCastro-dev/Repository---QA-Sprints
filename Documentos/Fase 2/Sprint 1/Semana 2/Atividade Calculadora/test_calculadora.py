@@ -90,7 +90,7 @@ def test_raiz_por_zero():
 
 @pytest.mark.raiz
 def test_raiz_negativa():
-    calculadora = Calculadora(-81,2)
+    calculadora = Calculadora(-6,2)
     with pytest.raises(ValueError) as exec_info:
-        calculadora.raiz(-81,2)
-    assert "Não é possível tirar uma raiz negativa" in str(exec_info.value)
+        calculadora.raiz(-6,2)
+    assert "Não é possível tirar a raiz de um número par negativo" in str(exec_info.value)

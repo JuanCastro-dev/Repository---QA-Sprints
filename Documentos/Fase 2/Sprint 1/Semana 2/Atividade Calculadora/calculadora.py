@@ -29,7 +29,7 @@ class Calculadora:
     def raiz(self,n1,n2):
         if n2 == 0:
             raise ValueError("Não é possível tirar a raiz zero de um número")
-        if n1 < 0 and n1 % 2 ==0:
-            raise ValueError("Não é possível tirar a raiz de um número par negativo")
+        if n1 < 0 and n2 % 2 ==0:
+            raise ValueError("Não é possível tirar a raiz de um número negativo com um índice par")
         return n1**(1/n2)
 
